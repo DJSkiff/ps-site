@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Головна</title>
+</head>
+
+<body>
+    <h1>Замовлення</h1>
+    {% for route in routes %}
+    <div>
+        <h2>{{route.client}}</h2>
+        <p>{{route.clientPhone}}</p>
+    </div>
+    {% endfor %}
+</body>
+
+</html>
