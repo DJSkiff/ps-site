@@ -1,0 +1,25 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.input {
+  margin-bottom: 15px;
+}
+
+.general {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.map {
+  /* box-sizing: border-box; */
+
+  display: inline-block;
+  width: 100%;
+
+  margin-left: 20px;
+  margin-right: 20px;
+}
