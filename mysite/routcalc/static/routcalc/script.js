@@ -74,14 +74,14 @@ const geocoder = new google.maps.Geocoder();
 
         }
 
-        function delName() {
+function delName() {
             var selectedIndex = sl.options.selectedIndex;
 
             sl.options[selectedIndex] = null;
 
         }
 
-        function createRoute() {
+function createRoute() {
             var start = document.getElementById('start').value;
             var end = document.getElementById('end').value;
             var waiPoints = []; // string to store the selected stuff
