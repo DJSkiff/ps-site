@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    {% load static %}
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key={{key}}&libraries=places&language=uk">
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Розрахунок</title>
+</head>
+<body>
+
+    <div class="general">
+        <div class="main">
+            <label for="start">Пункт виїзду</label>
+            <input class="input" id="start" type="text" size="50" value="16V, вулиця Куренівська, Київ, Україна">
+            <label for="start">Пункт повернення</label>
+            <input class="input" id="end" type="text" size="50" value="16V, вулиця Куренівська, Київ, Україна">
+            <label for="locationTextField">Точки маршруту</label>
+            <input class="input" id="locationTextField" type="text" size="50">
+            <div class="input">
+                <button type="button" width=100% onclick="setName()">Додати</button>
+                <button type="button" width=100% onclick="delName()">Видалити</button>
+            </div>
+            <select class="input" id="wayPoints" multiple size="10"></select>
+            <button class="input" type="button" width=100% onclick="createRoute()">Створити маршрут</button>
+            <div class="input">
+                <label for="fullRoute">Загальна довжина маршруту
+                    <input class="input" id="fullRoute" type="text">
+                </label>
+                
+                <label for="fullTime">Загальний час маршруту
+                    <input class="input" id="fullTime" type="text">
+                </label>
+            </div>
+        </div>
+        <div class="map" id="map"></div>
+    </div>
+
+    <script src={% static 'routcalc/script.js' %}></script>
+    <link rel="stylesheet" href={% static 'routcalc/styles.css' %}>
+    
+</body>
+</html>
